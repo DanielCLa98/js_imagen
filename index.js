@@ -2,14 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hola Mundo en JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1 id="mensaje"></h1>
-    
+    <div class="container">
+        <h1 id="mensaje"></h1>
+    </div>
+
     <script>
-        // Selecciona el elemento con id "mensaje" y cambia su contenido
-        document.getElementById("mensaje").textContent = "Hola, Mundo";
+        // Espera a que el documento esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecciona el elemento con id "mensaje" y cambia su contenido
+            document.getElementById("mensaje").textContent = "¡Hola, Mundo!";
+        });
     </script>
 </body>
 </html>
